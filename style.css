@@ -1,0 +1,212 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #0b0f1a;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #0b1a2b;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #cfd6e6;
+  font-weight: 400;
+  transition: 0.3s;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.nav-links .active {
+  background: #111827;
+  color: #a855f7;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* dark overlay */
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #d1d5db;
+  margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(90deg, #7c3aed, #9333ea);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* the CSS for both of these text and image patterns is the same */
+
+.text-image-container {
+    max-width: 1280px;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+@media screen and (min-width:700px) {
+    .text-image-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.left .text-image-text {
+    order: 1;
+}
+
+.text-image-text {
+    flex: 1;
+}
+
+.text-image-content {
+    flex: 1;
+}
+
+.text-image-content a {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 0.3rem;
+    background: red;
+    margin-top: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cards {
+    padding: 10px;
+}
+
+.card-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 700px) {
+    .cards {
+        padding: 40px;
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/*This is a shorthand property that sets flex-grow, flex-shrink, and flex-basis. It's useful to think of them as proportional arguments about how much the element should grow or shrink. 0 0 33% basically just means "take up a third", and don't "grow" or "shrink" any more, proportional to the other elements. */
+.a-card {
+    flex: 0 0 33%;
+    background: #eee;
+    padding: 1rem;
+    margin-right: 2px;
+    margin-bottom: 1rem;
+}
+
+.a-card * {
+    margin: 0;
+    padding: 0;
+}
+
+.a-card a {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 0.3rem;
+    background: white;
+    margin-top: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+}
